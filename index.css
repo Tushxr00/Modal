@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+ :root {
+    --first-font: 'Josefin Sans', sans-serif;
+    --white: #ffffff;
+    --black: #000000;
+    --light: #42cbf8;
+    --peach: #FFE5B4;
+    --red: rgb(199, 14, 14);
+    --grey: rgb(122, 120, 120);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--first-font);
+    background-color: var(--peach);
+    text-transform: capitalize;
+    font-size: 5ex;
+}
+
+.back-ground {
+    background-image: url("images/img01.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.banner {
+    background-color: var(--white);
+    padding: 1.8rem;
+    border-radius: 3rem;
+    letter-spacing: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.banner h1 {
+    text-align: center;
+}
+
+.modal-btn {
+    background-color: var(--light);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 25rem;
+    text-transform: capitalize;
+    font-size: 1.5ex;
+    margin-top: 0.7rem;
+    width: 10rem;
+    align-self: center;
+}
+
+.modal-btn:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.overlay {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.container {
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 3rem;
+    max-width: 40rem;
+    min-height: 10rem;
+    display: flex;
+}
+
+.container h3 {
+    padding: 2rem;
+    text-align: center;
+}
+
+.x-btn {
+    display: block;
+    color: var(--red);
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: none;
+    align-self: flex-start;
+    padding-top: 1rem;
+}
+
+.x-btn:hover {
+    transform: scale(1.3);
+}
+
+.open-model {
+    visibility: visible;
+    background: rgba(64, 233, 255, 0.3)
+}
+
+@media screen and (max-width:750px) {
+    body {
+        font-size: 3ex;
+    }
+    .overlay {
+        /* margin-left: 10vw;
+        width: 80vw;
+        height: 100vh; */
+        font-size: 5ex;
+    }
+    .container {
+        margin: 0 1rem;
+    }
+}
+
+@media screen and (max-width:500px) {
+    body {
+        font-size: 2ex;
+    }
+    .banner {
+        width: 70vw;
+    }
+    .overlay {
+        /* padding: 0;
+        font-size: 5ex; */
+    }
+}
